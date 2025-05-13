@@ -1,0 +1,459 @@
+/* styles.css - Versión con gradiente violeta/azul/morado */
+/* Fondo estelar estático */
+.stars {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+    z-index: -1;
+    background:#000 url('https://i.imgur.com/YKY28eT.png') repeat top center;
+}
+
+/* Estilos base con nueva paleta */
+:root {
+    --violet: #7e4dff;
+    --blue: #4d79ff;
+    --purple: #a84dff;
+    --dark-bg: #0f0a23;
+    --darker-bg: #0a0618;
+    --text-light: #d8d8ff;
+    --text-lighter: #f0f0ff;
+    --card-bg: rgba(30, 20, 60, 0.7);
+    --card-border: rgba(126, 77, 255, 0.2);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-light);
+    background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+    min-height: 100vh;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Encabezado con nuevo gradiente */
+.cosmic-header {
+      background: rgba(11, 13, 27, 0.9);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(79, 172, 254, 0.2);
+    position: relative;
+    z-index: 10;
+}
+
+/* Planetas rediseñados */
+.planet {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.windows-planet {
+    background: linear-gradient(135deg, #4d79ff 0%, #2a56df 100%);
+    border: 2px solid rgba(77, 121, 255, 0.5);
+}
+
+.mac-planet {
+    background: linear-gradient(135deg, #a84dff 0%, #7a2ddf 100%);
+    border: 2px solid rgba(168, 77, 255, 0.5);
+}
+
+.planet img {
+    width: 50px;
+    height: auto;
+    filter: brightness(1.2);
+}
+
+/* Título principal con nuevo gradiente */
+.galactic-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    background: linear-gradient(90deg, var(--purple) 0%, var(--blue) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.galactic-title span {
+    display: block;
+    font-size: 2.8rem;
+    background: linear-gradient(90deg, var(--blue) 0%, var(--violet) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.subtitle {
+    color: var(--text-lighter);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    opacity: 0.9;
+}
+
+/* Navegación rediseñada */
+.cosmic-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    list-style: none;
+    margin-top: 1.5rem;
+    padding: 0;
+}
+
+.cosmic-nav a {
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.cosmic-nav a:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.cosmic-nav i {
+    font-size: 1rem;
+}
+
+/* Secciones de contenido */
+.cosmic-main {
+    padding: 3rem 0;
+    position: relative;
+    z-index: 5;
+}
+
+.shortcut-section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.shortcut-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.win-section h2 {
+    background: linear-gradient(90deg, var(--blue) 0%, #4d9aff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.mac-section h2 {
+    background: linear-gradient(90deg, var(--purple) 0%, #c84dff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.shortcut-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.2rem;
+}
+
+.shortcut-card {
+    background: rgba(40, 30, 80, 0.6);
+    border-radius: 8px;
+    padding: 1.3rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(3px);
+}
+
+.shortcut-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(126, 77, 255, 0.2);
+    border-color: rgba(126, 77, 255, 0.4);
+    background: rgba(50, 40, 90, 0.7);
+}
+
+.win-section .shortcut-card:hover {
+    box-shadow: 0 10px 20px rgba(77, 121, 255, 0.2);
+    border-color: rgba(77, 121, 255, 0.4);
+}
+
+.mac-section .shortcut-card:hover {
+    box-shadow: 0 10px 20px rgba(168, 77, 255, 0.2);
+    border-color: rgba(168, 77, 255, 0.4);
+}
+
+.shortcut-keys {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text-lighter);
+    margin-bottom: 0.5rem;
+}
+
+.win-section .shortcut-keys {
+    color: #8db1ff;
+}
+
+.mac-section .shortcut-keys {
+    color: #d19eff;
+}
+
+.shortcut-desc {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* Sección de búsqueda */
+.search-section {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+    text-align: center;
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(5px);
+}
+
+.search-container {
+    display: flex;
+    max-width: 600px;
+    margin: 1.5rem auto;
+}
+
+#shortcutSearch {
+    flex: 1;
+    padding: 0.9rem 1.2rem;
+    border: 1px solid rgba(126, 77, 255, 0.3);
+    border-radius: 6px 0 0 6px;
+    font-size: 1rem;
+    background: rgba(30, 20, 60, 0.8);
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#shortcutSearch:focus {
+    border-color: var(--violet);
+    box-shadow: 0 0 10px rgba(126, 77, 255, 0.3);
+}
+
+#shortcutSearch::placeholder {
+    color: #b8b8e0;
+    opacity: 0.7;
+}
+
+#searchButton {
+    padding: 0 1.5rem;
+    background: linear-gradient(135deg, var(--violet) 0%, var(--blue) 100%);
+    color: white;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#searchButton:hover {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%);
+    transform: translateY(-1px);
+}
+
+.search-results {
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+/* Footer con nuevo gradiente */
+.cosmic-footer {
+    background: linear-gradient(135deg, var(--darker-bg) 0%, #140a30 100%);
+    padding: 3rem 0 2rem;
+    border-top: 1px solid rgba(126, 77, 255, 0.2);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-info h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--purple) 0%, var(--blue) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.footer-info p {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.credits {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.footer-links h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--blue) 0%, var(--violet) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.7rem;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.footer-links a:hover {
+    color: white;
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+.footer-links i {
+    width: 20px;
+    color: var(--purple);
+}
+
+.cosmic-copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(126, 77, 255, 0.1);
+    font-size: 0.85rem;
+    color: var(--text-light);
+    opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .galactic-title {
+        font-size: 2.8rem;
+    }
+    
+    .galactic-title span {
+        font-size: 2.2rem;
+    }
+    
+    .os-logos {
+        gap: 1.5rem;
+    }
+    
+    .planet {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .planet img {
+        width: 45px;
+    }
+    
+    .shortcut-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .shortcut-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .galactic-title {
+        font-size: 2.2rem;
+    }
+    
+    .galactic-title span {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .cosmic-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cosmic-nav a {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .shortcut-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #searchButton {
+        padding: 0 1rem;
+    }
+}
