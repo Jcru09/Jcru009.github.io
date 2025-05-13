@@ -1,5 +1,4 @@
-/* styles.css - Versión con gradiente violeta/azul/morado */
-/* Fondo estelar estático */
+
 .stars {
     position: fixed;
     top:0;
@@ -13,7 +12,7 @@
     background:#000 url('https://i.imgur.com/YKY28eT.png') repeat top center;
 }
 
-/* Estilos base con nueva paleta */
+
 :root {
     --violet: #7e4dff;
     --blue: #4d79ff;
@@ -43,7 +42,7 @@ body {
     padding: 0 1rem;
 }
 
-/* Encabezado con nuevo gradiente */
+
 .cosmic-header {
       background: rgba(11, 13, 27, 0.9);
     padding: 1.5rem 0;
@@ -52,7 +51,7 @@ body {
     z-index: 10;
 }
 
-/* Planetas rediseñados */
+
 .planet {
     width: 80px;
     height: 80px;
@@ -80,7 +79,7 @@ body {
     filter: brightness(1.2);
 }
 
-/* Título principal con nuevo gradiente */
+
 .galactic-title {
     font-family: 'Orbitron', sans-serif;
     font-size: 3.5rem;
@@ -110,7 +109,7 @@ body {
     opacity: 0.9;
 }
 
-/* Navegación rediseñada */
+
 .cosmic-nav ul {
     display: flex;
     justify-content: center;
@@ -147,7 +146,7 @@ body {
     font-size: 1rem;
 }
 
-/* Secciones de contenido */
+
 .cosmic-main {
     padding: 3rem 0;
     position: relative;
@@ -243,7 +242,7 @@ body {
     opacity: 0.9;
 }
 
-/* Sección de búsqueda */
+
 .search-section {
     background: var(--card-bg);
     padding: 2rem;
@@ -303,7 +302,7 @@ body {
     text-align: left;
 }
 
-/* Footer con nuevo gradiente */
+
 .cosmic-footer {
     background: linear-gradient(135deg, var(--darker-bg) 0%, #140a30 100%);
     padding: 3rem 0 2rem;
@@ -394,7 +393,7 @@ body {
     opacity: 0.6;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .galactic-title {
         font-size: 2.8rem;
